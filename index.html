@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Villalobos | WDD 131 Dynamic Web Fundamentals</title>
-    <meta name="description" content="Juan Villalobos - WDD 131 Dynamic Web Fundamentals">
-    <meta name="author" content="Juan Villalobos">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/base.css">
+  <title>WDD 131 – Dynamic Web Fundamentals – Juan Villalobos</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-        rel="stylesheet">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Juan Villalobos | course home page, about me, web dev resources, links.">
+  <meta name="author" content="Juan Villalobos">
+
+  <link rel="stylesheet" href="styles/base.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <span id="course-title">WDD 131 Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="https://www.linkedin.com/in/juan-manuel-villalobos-13a94522a/">Linkedln</a>
-            <a href="Canvas">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng">Alma 36:22</a>
-            <a href="">Final Project</a>
-        </nav>
-    </header>
-<main>
-    <h1>Juan Villalobos</h1>
-    <section class="card">
-        <h2>About Me</h2>
-        <p>Hello! My name is Juan Villalobos. I am currently a student at BYU-Idaho studying Web Development.</p>
-        <img src="images/juan.jpg" alt="Myself" width="300" height="250">
-        <h3>Maracaibo, Venezuela</h3>
-        <p>I was born and raised in Maracaibo, Venezuela.</p>
-        <img src="images/flag.jpg" alt="Venezuelan Flag" width="200" height="150">
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/juan-manuel-villalobos-13a94522a/">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng">Alma 36:22</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
 
-    </section>
+  <main>
+    <h1>Juan Villalobos</h1>
+
     <section class="card">
-        <h2>Web Dev Resources</h2>
+      <h2>About Me</h2>
+
+      <div class="about-grid">
+        <div>
+          <p>Hello! My name is Juan Villalobos...</p>
+          <h3>Maracaibo, Venezuela</h3>
+          <p>I was born and raised...</p>
+        </div>
+
+        <div>
+          <img src="images/juan.jpg" alt="Myself">
+          <img src="images/flag.jpg" alt="Venezuelan Flag">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web">MDN Web Docs</a></li>
         <li><a href="https://www.w3schools.com/">W3Schools</a></li>
         <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+      </ul>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>&copy; <span id="currentyear">2026</span> | Juan Villalobos | Utah  </p>
-    <p> <span id="lastmodified">Last Modified: </span></p>
-</footer>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
 </body>
-
-
 </html>
