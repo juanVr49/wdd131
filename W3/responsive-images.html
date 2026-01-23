@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <meta name="description" content="Responsive Images Example for the week 3 of the WDD 131 course.">
+    <meta name="author" content="Juan Villalobos">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Chile Conception Temple" width="1000" height="500">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
