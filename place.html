@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>W3 assignment. (Buenos Aires, Argentina)</title>
     <meta name="description" content="A description of the document.">
     <meta name="author" content="Juan Villalobos">
     <link rel="stylesheet" href="styles/place-web.css">
-    <script src="scripts/place.js"></script>
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h1>Buenos Aires, Argentina</h1>
+    </header>
+    <div class="hero">
+        <picture>
+            <source srcset="images/ba-web.webp" type="image/webp" media="(min-width: 700px)">
+            <source srcset="images/ba-phone.webp" type="image/webp">
+
+            <img src="images/ba-phone.webp" alt="Buenos Aires" width="1200" height="600" loading="lazy">
+        </picture>
+
+    </div>
+    <main>
+        <section class="info">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area</dt>
+                <dd>78.5 mi²</dd>
+                <dt>Population</dt>
+                <dd>15.7 million (2025)</dd>
+                <dt>Capital</dt>
+                <dd>Buenos Aires (La Plata)</dd>
+                <dt>Currency</dt>
+                <dd>Argentine Peso (ARS)</dd>
+                <dt>Language</dt>
+                <dd>Spanish</dd>
+                <dt>Time Zone</dt>
+                <dd>UTC -3</dd>
+            </dl>
+
+        </section>
+        <section class="weather">
+            <h2 class="weather-title">
+                Weather
+                <img class="weather-icon" src="images/weather-icon.svg" alt="Cloudy">
+            </h2>
+            <dl>
+                <dt>Temperature</dt>
+                <dd>84 °F </dd>
+                <dt>Humidity</dt>
+                <dd>59%</dd>
+                <dt>Wind</dt>
+                <dd>13 mph </dd>
+                <dt>Wind Chill</dt>
+                <dd><span id="windchill"></span></dd>
+            </dl>
+
+        </section>
+    </main>
+     <footer>
+        <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
 </body>
 </html>

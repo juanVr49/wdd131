@@ -1,0 +1,91 @@
+:root {
+  --bg: #ffffff;
+  --text: #0b1320;
+  --accent: #6bb7ff;      /* Argentina-ish sky blue */
+  --accent-dark: #1d4e89;
+  --card: rgba(255, 255, 255, 0.92);
+  --border: rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+  --max: 900px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+header, main, footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0.25rem 0;
+  color: var(--accent-dark);
+}
+
+.info, .weather {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+dt { font-weight: 700; }
+dd { margin: 0; text-align: right; }
+
+.weather-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.weather-icon {
+  width: 36px;
+  height: 36px;
+}
+@media (min-width: 700px) {
+  /* side-by-side panels like the wireframe */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .info, .weather {
+    margin-top: 0;
+  }
+
+  /* large view: hide SVG icon */
+  .weather-icon {
+    display: none;
+  }
+
+  /* large view: add emoticon after heading */
+  .weather-title::after {
+    content: " ⛅";
+  }
+}
+footer {
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
