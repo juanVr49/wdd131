@@ -1,7 +1,7 @@
 :root {
   --bg: #ffffff;
   --text: #0b1320;
-  --accent: #6bb7ff;      /* Argentina-ish sky blue */
+  --accent: #6bb7ff;      /* Argentina sky blue */
   --accent-dark: #1d4e89;
   --card: rgba(255, 255, 255, 0.92);
   --border: rgba(0, 0, 0, 0.12);
@@ -17,17 +17,34 @@ body {
   color: var(--text);
   background: var(--bg);
 }
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
 .hero img {
   width: 100%;
   height: auto;
   display: block;
 }
-header, main, footer {
+
+header, footer {
   max-width: var(--max);
   margin: 0 auto;
   padding: 1rem;
 }
 
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  z-index: 2;
+}
+
+h2  {
+  margin: 0 0 0.75rem;
+  color: var(--accent-dark);
+}
 header h1 {
   margin: 0.25rem 0;
   color: var(--accent-dark);
@@ -63,24 +80,34 @@ dd { margin: 0; text-align: right; }
   height: 36px;
 }
 @media (min-width: 700px) {
-  /* side-by-side panels like the wireframe */
+
+  .hero {
+    position: relative;
+  }
+
   main {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: var(--max);
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: start;
+    gap: 2rem;
+    padding: 0 1rem;
   }
 
   .info, .weather {
-    margin-top: 0;
+    background: rgba(255, 255, 255, 0.9);
   }
 
-  /* large view: hide SVG icon */
+  /* hide SVG in large view */
   .weather-icon {
     display: none;
   }
 
-  /* large view: add emoticon after heading */
+  /* add emoticon after Weather heading */
   .weather-title::after {
     content: " ⛅";
   }
@@ -88,4 +115,7 @@ dd { margin: 0; text-align: right; }
 footer {
   border-top: 1px solid var(--border);
   font-size: 0.95rem;
+}
+footer p {
+  margin: 0.25rem 0;
 }
