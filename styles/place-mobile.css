@@ -32,12 +32,6 @@ header {
   border-bottom: 8px solid var(--accent);
 }
 
-footer {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 main {
   max-width: var(--max);
   margin: 0 auto;
@@ -123,7 +117,9 @@ footer {
   text-align: center;
   border-top: 8px solid var(--accent);
   font-size: 0.95rem;
+  padding: 1rem;
 }
+
 footer p {
   margin: 0.25rem 0;
 }
