@@ -1,0 +1,165 @@
+:root {
+  --bg: #0b1320;
+  --surface: #101b2e;
+  --text: #eef2ff;
+  --muted: #b8c1d9;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius: 14px;
+
+  --heading-font: "Montserrat", system-ui, sans-serif;
+  --body-font: "Source Sans 3", system-ui, sans-serif;
+
+  --max: 900px;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header */
+header {
+  background: linear-gradient(180deg, var(--surface), rgba(16, 27, 46, 0.5));
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 1rem 0.5rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hamburger button */
+#menu {
+  font-size: 1.4rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+/* Links */
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+}
+
+/* Hover + focus */
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+/* Active link */
+nav a.active {
+  background: rgba(128, 255, 219, 0.18);
+  border-color: rgba(128, 255, 219, 0.7);
+}
+
+/* ✅ Mobile menu behavior:
+   Hide links by default, show when nav has .open
+*/
+nav a {
+  display: none;
+}
+nav.open a {
+  display: inline-block;
+}
+
+/* Main */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main > h2 {
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 0.75rem 0 1rem;
+}
+
+/* Gallery (mobile: 1 column) */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Temple card */
+.temple-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.temple-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.temple-card figcaption {
+  padding: 0.9rem 1rem;
+  color: var(--muted);
+}
+
+.temple-card h3 {
+  font-family: var(--heading-font);
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.temple-card p {
+  margin: 0.25rem 0;
+  font-weight: 400;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1.25rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
