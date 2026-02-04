@@ -1,12 +1,74 @@
 :root {
   --bg: #ffffff;
   --text: #0b1320;
-  --accent: #6bb7ff;      /* Argentina sky blue */
-  --accent-dark: #1d4e89;
-  --card: rgba(255, 255, 255, 0.92);
+
+  --primary: #1d4e89;  /* header + headings */
+  --accent: #6bb7ff;   /* links + highlights */
+
+  --card: #f3f6ff;     /* section background */
   --border: rgba(0, 0, 0, 0.12);
+
   --radius: 12px;
   --max: 900px;
 }
 
 * { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 1.6rem;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+h2, h3 {
+  font-family: "Montserrat", system-ui, sans-serif;
+  margin: 0.25rem 0 0.5rem;
+}
+
+ul {
+  margin: 0.5rem 0 0.5rem 1.2rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+strong {
+  color: var(--primary);
+}
+
+footer {
+  font-size: 0.95rem;
+  color: rgba(11, 19, 32, 0.8);
+  border-top: 1px solid var(--border);
+}
