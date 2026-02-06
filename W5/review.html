@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Form confirmation page that displays the submitted review details." />
+  <meta name="author" content="Juan Villalobos" />
+  <title>Review Confirmation</title>
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+  <header class="container">
+    <h1>Review Submitted ✅</h1>
+    <p class="subtitle">Thanks for your feedback!</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Your Submission</h2>
+
+      <!-- JS will fill this -->
+      <dl id="results"></dl>
+
+      <p style="margin-top: 1rem;">
+        <a href="form.html">Submit another review</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
