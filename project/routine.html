@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music & Productivity | Home</title>
+  <meta name="description" content="Learn how music can support focus, relaxation, and productivity with practical tips and routines." />
+  <meta name="author" content="Juan Villalobos" />
+   
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <span class="logo" aria-hidden="true">M</span>
+                </div>
+                <p class="brand-tittle">Music & Productivity</p>
+                <p class="brand-subtitle">Focus, Relax, Energy</p>
+            </div>
+        </div>
+
+        <button id="menu" class="menu-btn" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="site-nav" class="site-nav">
+         <a class="nav-link active" href="index.html">Home</a>
+         <a class="nav-link" href="genres.html">Genres</a>
+         <a class="nav-link" href="routine.html">Routine Builder</a>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero">
+          <div class="hero-text">
+            <h1>Routine Builder</h1>
+            <p>Choose your goal and get a personalized routine. Your preferences will be saved.</p>
+            <div class="hero-actions">
+                <a class="btn" href="genres.html">Explore Genres</a>
+                <a class="btn" href="routine.html">Build Your Routine</a>
+            </div>
+          </div>
+
+          <img class="hero-img"
+           src="images/hero-image.jpg" alt="Headphones and a notebook on a desk" 
+           width="1200" height="700" loading="lazy">
+        </section>
+
+        <section class="grid-3">
+            <article class="card">
+                <h2>Focus</h2>
+                <p>Instrumental music can help reduce distractions and support sustained attention.</p>
+            </article>
+            <article class="card">
+                <h2>Relax</h2>
+                <p>Slow tempo and calm sound can help you decompress after stressful moments.</p>
+            </article>
+            <article class="card">
+                <h2>Energy</h2>
+                <p>upbeat music can boost motivation and make repetitive tasks feel easier</p>
+            </article>    
+        </section>
+
+        <section class="card">
+            <h2>Quick Tips</h2>
+            <ul>
+                <li>For deep work, start with instrumental or low-lyric music.</li>
+                <li>Keep volume moderate to avoid fatigue</li>
+                <li>Use music breaks: focus 25 minutes, rest 5 minutes</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+            <p><a href="references.html">References</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
