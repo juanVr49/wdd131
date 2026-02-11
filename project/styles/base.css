@@ -1,0 +1,157 @@
+:root{
+  --bg:#ffffff;
+  --text:#0b1320;
+  --primary:#1d4e89;
+  --accent:#6bb7ff;
+  --card:#f3f6ff;
+  --border:rgba(0,0,0,.12);
+  --radius:12px;
+  --max:1000px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Roboto",system-ui,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+img{ max-width:100%; height:auto; display:block; }
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:1rem;
+}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  background:#fff;
+  border:2px solid var(--primary);
+  padding:.5rem .75rem;
+  border-radius:10px;
+  z-index:10;
+}
+
+.site-header{
+  background:var(--primary);
+  color:#fff;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.logo{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:var(--accent);
+  color:var(--primary);
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  font-family:"Montserrat",system-ui,sans-serif;
+}
+
+.brand-title{
+  margin:0;
+  font-family:"Montserrat",system-ui,sans-serif;
+  font-weight:700;
+}
+.brand-subtitle{ margin:0; opacity:.9; font-size:.95rem; }
+
+.menu-btn{
+  border:1px solid rgba(255,255,255,.35);
+  background:transparent;
+  color:#fff;
+  padding:.45rem .65rem;
+  border-radius:10px;
+  font-size:1.1rem;
+}
+
+.site-nav{
+  display:none;
+  gap:.75rem;
+}
+
+.site-nav.open{ display:flex; flex-direction:column; }
+
+.nav-link{
+  color:#fff;
+  text-decoration:none;
+  padding:.35rem .5rem;
+  border-radius:10px;
+}
+.nav-link:hover,
+.nav-link:focus-visible{
+  background:rgba(255,255,255,.15);
+}
+.nav-link.active{
+  background:rgba(255,255,255,.25);
+}
+
+.hero{
+  display:grid;
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.hero-text h1{
+  font-family:"Montserrat",system-ui,sans-serif;
+  margin:.25rem 0;
+}
+
+.hero-actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
+
+.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  text-decoration:none;
+  padding:.6rem .9rem;
+  border-radius:12px;
+  border:1px solid var(--primary);
+  font-weight:600;
+}
+.btn-outline{
+  background:transparent;
+  color:var(--primary);
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1rem;
+  margin:1rem 0;
+}
+
+.grid-3{
+  display:grid;
+  gap:1rem;
+}
+
+.site-footer{
+  border-top:1px solid var(--border);
+  margin-top:2rem;
+}
+.site-footer a{ color:var(--primary); }
