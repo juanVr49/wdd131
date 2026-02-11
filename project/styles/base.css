@@ -155,3 +155,32 @@ img{ max-width:100%; height:auto; display:block; }
   margin-top:2rem;
 }
 .site-footer a{ color:var(--primary); }
+
+.filter-row{
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
+  margin-top:.5rem;
+}
+
+.chip{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:.45rem .7rem;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.chip:hover,
+.chip:focus-visible{
+  outline:none;
+  border-color:var(--primary);
+}
+
+.chip.active{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+.muted{ opacity:.85; }
