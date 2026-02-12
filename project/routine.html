@@ -3,129 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music & Productivity | Home</title>
-  <meta name="description" content="Learn how music can support focus, relaxation, and productivity with practical tips and routines." />
+  <title>Music & Productivity | Routine Builder</title>
+  <meta name="description" content="Build a personalized music routine for focus, relaxation, or energy and save your preferences." />
   <meta name="author" content="Juan Villalobos" />
-   
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
 
-  <!-- JS -->
   <script src="scripts/main.js" defer></script>
+  <script src="scripts/routine.js" defer></script>
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="brand">
-                <span class="logo" aria-hidden="true">M</span>
-                </div>
-                <p class="brand-tittle">Music & Productivity</p>
-                <p class="brand-subtitle">Focus, Relax, Energy</p>
-            </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">JM</span>
+        <div>
+          <p class="brand-title">Music & Productivity</p>
+          <p class="brand-subtitle">Focus • Relax • Energy</p>
         </div>
+      </div>
 
-        <button id="menu" class="menu-btn" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-            ☰
-        </button>
+      <button id="menu" class="menu-btn" type="button"
+        aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+        ☰
+      </button>
 
-        <nav id="site-nav" class="site-nav">
-         <a class="nav-link active" href="index.html">Home</a>
-         <a class="nav-link" href="genres.html">Genres</a>
-         <a class="nav-link" href="routine.html">Routine Builder</a>
-        </nav>
-    </header>
+      <nav id="site-nav" class="site-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="genres.html">Genres</a>
+        <a class="nav-link active" href="routine.html">Routine Builder</a>
+      </nav>
+    </div>
+  </header>
 
-    <main id="main" class="container">
-  <h1>Routine Builder</h1>
-  <p>Choose your goal and preferences. We’ll generate a routine and save your settings.</p>
+  <main id="main" class="container">
+    <h1>Routine Builder</h1>
+    <p>Choose your goal and preferences. We’ll generate a routine and save your settings.</p>
 
-  <section class="card">
-    <h2>Your Preferences</h2>
+    <section class="card">
+      <h2>Your Preferences</h2>
 
-    <form id="routine-form">
-      <label class="field">
-        <span>Goal</span>
-        <select id="goal" name="goal" required>
-          <option value="" disabled selected>Select one</option>
-          <option value="focus">Focus</option>
-          <option value="relax">Relax</option>
-          <option value="energy">Energy</option>
-        </select>
-      </label>
+      <form id="routine-form">
+        <label class="field">
+          <span>Goal</span>
+          <select id="goal" name="goal" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="focus">Focus</option>
+            <option value="relax">Relax</option>
+            <option value="energy">Energy</option>
+          </select>
+        </label>
 
-      <label class="field">
-        <span>Session Length</span>
-        <select id="duration" name="duration" required>
-          <option value="15">15 minutes</option>
-          <option value="30" selected>30 minutes</option>
-          <option value="60">60 minutes</option>
-        </select>
-      </label>
+        <label class="field">
+          <span>Session Length</span>
+          <select id="duration" name="duration" required>
+            <option value="15">15 minutes</option>
+            <option value="30" selected>30 minutes</option>
+            <option value="60">60 minutes</option>
+          </select>
+        </label>
 
-      <label class="field check">
-        <input id="lyrics" name="lyrics" type="checkbox">
-        <span>Lyrics are okay</span>
-      </label>
+        <label class="field check">
+          <input id="lyrics" name="lyrics" type="checkbox">
+          <span>Lyrics are okay</span>
+        </label>
 
-      <button class="btn" type="submit">Build My Routine</button>
-      <button class="btn btn-outline" type="button" id="clear">Clear Saved</button>
-    </form>
-  </section>
+        <button class="btn" type="submit">Build My Routine</button>
+        <button class="btn btn-outline" type="button" id="clear">Clear Saved</button>
+      </form>
+    </section>
 
-  <section class="card">
-    <h2>Your Routine</h2>
-    <p id="routine-message" class="muted">Fill the form and click “Build My Routine”.</p>
-    <div id="routine-output"></div>
-  </section>
-</main>
+    <section class="card">
+      <h2>Your Routine</h2>
+      <p id="routine-message" class="muted">Fill the form and click “Build My Routine”.</p>
+      <div id="routine-output"></div>
+    </section>
+  </main>
 
-
-          <img class="hero-img"
-           src="images/hero-image.jpg" alt="Headphones and a notebook on a desk" 
-           width="1200" height="700" loading="lazy">
-        </section>
-
-        <section class="grid-3">
-            <article class="card">
-                <h2>Focus</h2>
-                <p>Instrumental music can help reduce distractions and support sustained attention.</p>
-            </article>
-            <article class="card">
-                <h2>Relax</h2>
-                <p>Slow tempo and calm sound can help you decompress after stressful moments.</p>
-            </article>
-            <article class="card">
-                <h2>Energy</h2>
-                <p>upbeat music can boost motivation and make repetitive tasks feel easier</p>
-            </article>    
-        </section>
-
-        <section class="card">
-            <h2>Quick Tips</h2>
-            <ul>
-                <li>For deep work, start with instrumental or low-lyric music.</li>
-                <li>Keep volume moderate to avoid fatigue</li>
-                <li>Use music breaks: focus 25 minutes, rest 5 minutes</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
-            <p>Last Modified: <span id="lastmodified"></span></p>
-            <p><a href="references.html">References</a></p>
-        </div>
-    </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentyear"></span> Juan Villalobos | Utah</p>
+      <p>Last Modified: <span id="lastmodified"></span></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
 </body>
-
 </html>

@@ -14,13 +14,23 @@ const library = [
   { name: "Chill Acoustic", goal: "relax", lyrics: true }
 ];
 
+function titleCase(word) {
+  return `${word[0].toUpperCase()}${word.slice(1)}`;
+}
+
 function savePrefs(prefs) {
   localStorage.setItem("mp_prefs", JSON.stringify(prefs));
 }
 
 function loadPrefs() {
   const raw = localStorage.getItem("mp_prefs");
-  return raw ? JSON.parse(raw) : null;
+  if (!raw) return null;
+
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
 }
 
 function clearPrefs() {
@@ -50,13 +60,13 @@ function renderRoutine(prefs) {
   const blocks = buildBlocks(prefs.duration);
   const picks = recommend(prefs.goal, prefs.lyricsOk);
 
-  msg.textContent = `Routine built for ${prefs.goal} (${prefs.duration} minutes).`;
+  msg.textContent = `Routine built for ${titleCase(prefs.goal)} (${prefs.duration} minutes).`;
 
   output.innerHTML = `
     <article class="card">
       <h3>Your Settings</h3>
       <ul>
-        <li><strong>Goal:</strong> ${prefs.goal}</li>
+        <li><strong>Goal:</strong> ${titleCase(prefs.goal)}</li>
         <li><strong>Duration:</strong> ${prefs.duration} minutes</li>
         <li><strong>Lyrics:</strong> ${prefs.lyricsOk ? "Allowed" : "Instrumental preferred"}</li>
       </ul>
@@ -93,7 +103,6 @@ function getPrefsFromForm() {
   };
 }
 
-// events
 if (routineForm) {
   routineForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -101,7 +110,7 @@ if (routineForm) {
     const prefs = getPrefsFromForm();
 
     if (!prefs.goal) {
-      msg.textContent = "Please choose a goal.";
+      if (msg) msg.textContent = "Please choose a goal.";
       return;
     }
 
@@ -119,7 +128,6 @@ if (clearBtn) {
   });
 }
 
-// init
 const saved = loadPrefs();
 if (saved) {
   applyPrefsToForm(saved);

@@ -15,4 +15,15 @@
   .grid-3{
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .site-nav.open{
+  flex-direction:row;
+  padding:0;
+  background:transparent;
+}
+
+.hero-img{
+  border-radius: var(--radius);
+}
+
 }

@@ -14,3 +14,4 @@ if (menuBtn && nav) {
     menuBtn.setAttribute("aria-label", `${isOpen ? "Close menu" : "Open menu"}`);
   });
 }
+menuBtn.classList.toggle("open", isOpen);
