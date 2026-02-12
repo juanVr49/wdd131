@@ -45,15 +45,49 @@
     </header>
 
     <main id="main" class="container">
-        <section class="hero">
-          <div class="hero-text">
-            <h1>Routine Builder</h1>
-            <p>Choose your goal and get a personalized routine. Your preferences will be saved.</p>
-            <div class="hero-actions">
-                <a class="btn" href="genres.html">Explore Genres</a>
-                <a class="btn" href="routine.html">Build Your Routine</a>
-            </div>
-          </div>
+  <h1>Routine Builder</h1>
+  <p>Choose your goal and preferences. We’ll generate a routine and save your settings.</p>
+
+  <section class="card">
+    <h2>Your Preferences</h2>
+
+    <form id="routine-form">
+      <label class="field">
+        <span>Goal</span>
+        <select id="goal" name="goal" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="focus">Focus</option>
+          <option value="relax">Relax</option>
+          <option value="energy">Energy</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Session Length</span>
+        <select id="duration" name="duration" required>
+          <option value="15">15 minutes</option>
+          <option value="30" selected>30 minutes</option>
+          <option value="60">60 minutes</option>
+        </select>
+      </label>
+
+      <label class="field check">
+        <input id="lyrics" name="lyrics" type="checkbox">
+        <span>Lyrics are okay</span>
+      </label>
+
+      <button class="btn" type="submit">Build My Routine</button>
+      <button class="btn btn-outline" type="button" id="clear">Clear Saved</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Your Routine</h2>
+    <p id="routine-message" class="muted">Fill the form and click “Build My Routine”.</p>
+    <div id="routine-output"></div>
+  </section>
+</main>
+
 
           <img class="hero-img"
            src="images/hero-image.jpg" alt="Headphones and a notebook on a desk" 

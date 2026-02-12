@@ -93,12 +93,19 @@ img{ max-width:100%; height:auto; display:block; }
   gap:.75rem;
 }
 
-.site-nav.open{ display:flex; flex-direction:column; }
+.site-nav.open{
+  display:flex;
+  flex-direction:column;
+  padding:.75rem;
+  background: rgba(255,255,255,.08);
+  border-radius: 12px;
+}
+
 
 .nav-link{
   color:#fff;
   text-decoration:none;
-  padding:.35rem .5rem;
+  padding: .5rem .75rem;
   border-radius:10px;
 }
 .nav-link:hover,
@@ -107,6 +114,11 @@ img{ max-width:100%; height:auto; display:block; }
 }
 .nav-link.active{
   background:rgba(255,255,255,.25);
+}
+
+:focus-visible{
+  outline:3px solid var(--accent);
+  outline-offset:3px;
 }
 
 .hero{
@@ -119,6 +131,16 @@ img{ max-width:100%; height:auto; display:block; }
   font-family:"Montserrat",system-ui,sans-serif;
   margin:.25rem 0;
 }
+
+h1, h2, h3{
+  font-family:"Montserrat",system-ui,sans-serif;
+  line-height:1.2;
+}
+
+h1{ margin: 1rem 0 .5rem; }
+h2{ margin: .75rem 0 .4rem; }
+h3{ margin: .5rem 0 .35rem; }
+
 
 .hero-actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
 
@@ -173,7 +195,6 @@ img{ max-width:100%; height:auto; display:block; }
 
 .chip:hover,
 .chip:focus-visible{
-  outline:none;
   border-color:var(--primary);
 }
 
@@ -184,3 +205,32 @@ img{ max-width:100%; height:auto; display:block; }
 }
 
 .muted{ opacity:.85; }
+
+.field{
+  display:block;
+  margin:.75rem 0;
+}
+
+.field span{
+  display:block;
+  font-weight:600;
+  margin-bottom:.35rem;
+}
+
+select, input[type="text"]{
+  width:100%;
+  padding:.55rem .6rem;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#fff;
+}
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+
+#routine-output .card{
+  margin-top:.75rem;
+}
