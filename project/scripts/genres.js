@@ -18,7 +18,7 @@ const genres = [
     goal: "energy",
     description: "Higher energy tracks can boost motivation and make repetitive tasks feel easier.",
     tips: ["Great for chores", "Use in short bursts", "Avoid for reading-heavy tasks"],
-    image: { src: "images/energy.webp", alt: "Headphones representing energetic music" }
+    image: { src: "images/headphones.webp", alt: "Headphones representing energetic music" }
   }
 ];
 
